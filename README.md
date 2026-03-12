@@ -16,6 +16,25 @@ KasmVNC provides remote web-based access to a Desktop or application. While VNC 
 
 ## Installation
 
+### Pre-built Binary (Ubuntu Jammy / Zorin OS 17, x86_64)
+
+This fork provides pre-built binaries that share your existing display `:0` via a web browser on port 6901, with Tailscale Serve support.
+
+```sh
+# Download and extract the latest release
+wget https://github.com/PegasisForever/KasmVNC/releases/latest/download/kasmvnc-ubuntu-jammy-x86_64.tar.gz
+tar -xzf kasmvnc-ubuntu-jammy-x86_64.tar.gz
+sudo ./install.sh
+```
+
+The installer will:
+- Install `Xvnc` and `kasmxproxy` to `/usr/local/bin/`
+- Install the web frontend to `/usr/share/kasmvnc/www/`
+- Set up and enable systemd services (`kasmvnc`, `kasmxproxy`, `tailscale-serve`)
+- Add an autostart entry to fix black screen after login
+
+Access at `http://localhost:6901` or via Tailscale at `https://<hostname>.ts.net`.
+
 **You must disconnect and reconnect to the server after installation, for the group membership to apply.**
 
 ### Debian/Ubuntu/Kali
