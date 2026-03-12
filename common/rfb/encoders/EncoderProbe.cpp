@@ -97,7 +97,7 @@ namespace rfb::video_encoders {
                 FFmpeg::BufferGuard hw_ctx_guard;
                 AVBufferRef *hw_ctx{};
 
-                if (dri_node) {
+                if (dri_node && dri_node[0]) {
                     const auto err = ffmpeg.av_hwdevice_ctx_create(&hw_ctx, encoder_candidate.hw_type, dri_node, nullptr, 0);
                     if (err == 0) {
                         hw_ctx_guard.reset(hw_ctx);
