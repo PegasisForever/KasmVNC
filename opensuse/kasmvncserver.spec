@@ -1,5 +1,5 @@
 Name:           kasmvncserver
-Version:        1.3.4
+Version:        1.5.0
 Release:        leap15
 Summary:        VNC server accessible from a web browser
 
