@@ -1,3 +1,9 @@
+kasmvnc (1.5.1-1) unstable; urgency=medium
+
+  * Replace left control panel with fullscreen FAB button.
+
+ -- Kasm Technologies LLC <info@kasmweb.com>  Mon, 16 Mar 2026 19:00:00 +0000
+
 kasmvnc (1.5.0-1) unstable; urgency=medium
 
   * Bump version to 1.5.0.
